@@ -99,7 +99,7 @@ function App() {
   };
 
   // --- FRONTEND FILTERING & SORTING LOGIC ---
-  const filteredTasks = tasks.filter((task) => {
+  const filteredTasks = tasks?.filter((task) => {
     if (filterStatus === "All") return true;
     return task.status === filterStatus;
   });
