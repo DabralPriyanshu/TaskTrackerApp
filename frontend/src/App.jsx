@@ -126,7 +126,7 @@ function App() {
           <div className="flex justify-center items-center py-20">
             <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-indigo-600"></div>
           </div>
-        ) : filteredTasks.length === 0 ? (
+        ) : filteredTasks?.length === 0 ? (
           <div className="text-center py-20 bg-white rounded-2xl shadow-sm border border-gray-100">
             <p className="text-gray-400 text-lg font-medium">
               No task found please create task ! ✨
@@ -134,7 +134,7 @@ function App() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {filteredTasks.map((task) => (
+            {filteredTasks?.map((task) => (
               <TaskCard
                 key={task._id}
                 task={task}
